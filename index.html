@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Home</title>
+ </head>
+ <body>
+     <section class="showcase">
+          <header>
+            <h2 class="logo">Puri Tourism</h2>
+            <div class="toggle"></div>
+          </header>
+          <video src="Jagannath Ji.mp4" autoplay loop muted > </video>          
+          <div class="overlay"></div>
+          <div class="text">
+            <h2>Never Stop To </h2> 
+            <h3>Exploring The World</h3>
+            <p>Puri is famous for the world famous Jagannath Temple & Longest Golden Beach. It is one of the Dhamas (Holiest of the holy place) out of four Dhamas i.e. Puri, Dwarika, Badrinath & Rameswar, in India. Lord Jagannath, Devi Subhadra and elder brother Balabhadra are being worshipped in Puri (The Purusottama Kshetra)..</p>
+            <a href="https://goo.gl/maps/W2i41m1izB81HHkc9">Explore Puri</a>
+            
+          </div>
+          <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+          </ul>
+        </section>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="https://goo.gl/maps/W2i41m1izB81HHkc9">Map View</a></li>
+            <li><a href="Destination.html">Places</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            <li><a href="hotel.html">Hotels Info</a></li>
+            
+          </ul>
+        </div>
+        <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+  
+        menuToggle.addEventListener('click', () => {
+          menuToggle.classList.toggle('active');
+          showcase.classList.toggle('active');
+        })
+     </script>
+      
+ </body>
+ </html>
+  

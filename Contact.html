@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <h1>Puri Tourism</h1>
+    
+    <div id="enterDetails">
+        <h2><u>*Enter details*</u></h2>
+
+        <label>ID:</label> <br>
+        <input id="enterID" type="text" placeholder="Enter Your ID" required=""> <br>
+
+        
+
+        <label>Name:</label><br> 
+        <input id="enterName" type="text" placeholder="Enter Your Name" required=""> <br>
+
+        <label>Age:</label> <br>
+        <input id="enterAge" type="number" placeholder="Enter Your Age" required=""> <br>
+
+        <label>Email:</label> <br>
+        <input id="email" type="email" placeholder="Enter Your Email" required=""><br>
+
+        <label>Mobile:</label> <br>
+        <input id="phone" type="tel" placeholder="Enter Your Mobile No" required=""> <br>
+
+        <label>Message:</label> <br>
+        <input id="message" type="text" placeholder="Enter Your Message" required=""> <br><br>
+
+        <button id="insert">SUBMIT</button>
+        <a href="index.html"><button type="menu" id="home">DASHBOARD</button></a>
+
+   
+
+    
+
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCyW_iixDgdvgHC-pvmdsu9sDSNfiIANx0",
+      authDomain: "puri-tourism-e67eb.firebaseapp.com",
+      databaseURL: "https://puri-tourism-e67eb-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "puri-tourism-e67eb",
+      storageBucket: "puri-tourism-e67eb.appspot.com",
+      messagingSenderId: "108814615148",
+      appId: "1:108814615148:web:08961d7f0aa7639467ce49"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  
+
+
+    import {getDatabase, set, get, update, remove, ref, child} 
+    from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js";
+  
+    const db = getDatabase();
+
+        var enterID = document.querySelector("#enterID");
+        var enterName = document.querySelector("#enterName");
+        var enterAge = document.querySelector("#enterAge");
+        var email = document.querySelector("#email");
+        var phone = document.querySelector("#phone");
+        var message = document.querySelector("#message");
+        
+      
+
+        var insertBtn = document.querySelector("#insert");
+       
+
+        function InsertData() {
+            set(ref(db, "Users/"+ enterID.value),{
+                Name: enterName.value,
+                ID: enterID.value,
+                Age: enterAge.value,
+                Email: email.value,
+                Mobile: phone.value,
+                Message: message.value
+            })
+            .then(()=>{
+                alert("User Details Sent");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+        }
+
+
+        insertBtn.addEventListener('click', InsertData);
+       
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:linear-gradient(lightblue,black);
+    background-repeat: no-repeat;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+
+.sec1{
+  margin: 10%;
+}
+
+.sec2{
+  margin: 10%;
+  float: right;
+  
+}
+
+.sec3{
+  margin: 10%;
+  
+}
+
+
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: -webkit-linear-gradient(brown,lightblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2{
+    text-align: center;
+    color: blueviolet;
+    filter:blur(.5px);
+    font-family: 'Edu VIC WA NT Beginner',cursive;
+}
+
+h3{
+    position: absolute;
+    left: 1rem;
+}
+
+p{
+  font-family: 'Dancing Script',cursive;
+  font-weight: 800;
+  font-size: larger;
+  color: darkorange;
+}
+
+h5{
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+
+.sec1:hover .overlay{
+  opacity:1;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 68%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: burlywood;
+}
+
+/* sec 2 */
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+
+.sec2:hover .overlay1{
+  opacity:1;
+}
+
+.txt {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 400%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: burlywood;
+}
+
+/* sec3 */
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+
+.sec3:hover .overlay2{
+  opacity:1;
+}
+
+.par {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 150rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: burlywood;
+}
+
+.sec1 img{
+  border-radius: 30px;
+}
+
+.sec2 img{
+  border-radius: 30px;
+}
+
+.sec3 img{
+  border-radius: 30px;
+}
+
+#btn{
+  position: relative;
+  left: 47%;
+  font-family: 'Poppins';
+  border-radius: 1rem;
+  padding: .3rem;
+  cursor: pointer;
+  margin-bottom: 5rem;
+  font-weight: 600;
+
+  
+}
+
+#btn:hover{
+  color: greenyellow;
+  background-color: brown;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .sec1, .sec2, .sec3 {
+    width: 100%;
+  }
+}
+
+
+
